@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet Sunshine — A Letter for Muthu</title>
+    <meta name="description" content="An interactive birthday letter, meant to be opened slowly, like petals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Flower Background Element -->
+    <div class="flower-container">
+        <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g class="flower-center">
+                <circle cx="100" cy="100" r="15" fill="#FFE5B4" opacity="0.8" />
+            </g>
+            <!-- Petals will be added dynamically -->
+            <g class="petals" id="petals"></g>
+        </svg>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="app">
+        <!-- Chapter 0: Landing -->
+        <section class="chapter active" id="chapter-0" data-chapter="0">
+            <div class="glass-panel">
+                <h1 class="chapter-title fade-in">Hey.</h1>
+                <p class="chapter-text fade-in-delay">This isn't a website.<br>It's something meant to be taken slowly.
+                </p>
+                <button class="begin-button" id="begin-btn">Begin gently</button>
+            </div>
+        </section>
+
+        <!-- Chapter 1: The Day -->
+        <section class="chapter" id="chapter-1" data-chapter="1">
+            <div class="glass-panel">
+                <p class="chapter-text">It's December 21.<br>You turned 18 today.</p>
+                <p class="chapter-text spacing-top">Not loudly.<br>Not dramatically.<br>Just… quietly.</p>
+                <p class="chapter-text spacing-top">Like moments that don't rush themselves.</p>
+                <div class="tap-hint">Tap anywhere to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 2: How the World Feels Around You -->
+        <section class="chapter" id="chapter-2" data-chapter="2">
+            <div class="glass-panel parallax-text">
+                <p class="chapter-text">Some people don't enter a room.<br>They settle into it.</p>
+                <p class="chapter-text spacing-top">Things don't get louder when they arrive.<br>They get easier.</p>
+                <p class="chapter-text spacing-top">You do that —<br>without even trying.</p>
+                <div class="tap-hint">Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 3: The Little Things -->
+        <section class="chapter" id="chapter-3" data-chapter="3">
+            <div class="glass-panel">
+                <p class="chapter-text">You notice small things.<br>Not because you're trying to be kind —<br>but
+                    because that's how you see the world.</p>
+                <p class="chapter-text spacing-top">Quiet details.<br>Subtle moments.<br>Things most people miss.</p>
+                <p class="chapter-text spacing-top">And somehow, that becomes comfort for others.</p>
+                <div class="side-notes">
+                    <span class="note" style="top: 20%; left: 10%;">this matters</span>
+                    <span class="note" style="top: 50%; right: 15%;">you noticed</span>
+                    <span class="note" style="bottom: 25%; left: 15%;">always</span>
+                </div>
+                <div class="tap-hint">Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 4: How I First Saw You -->
+        <section class="chapter" id="chapter-4" data-chapter="4">
+            <div class="glass-panel">
+                <div class="reveal-paragraphs">
+                    <p class="chapter-text reveal-p">When I first came across you,<br>I might've seemed distant.</p>
+                    <p class="chapter-text reveal-p spacing-top">Maybe reserved.<br>Maybe even a little intimidating.
+                    </p>
+                    <p class="chapter-text reveal-p spacing-top">But what stayed with me wasn't how things started
+                        —<br>it was how gently you looked past that.</p>
+                    <p class="chapter-text reveal-p spacing-top">You didn't question it.<br>You didn't try to change it.
+                    </p>
+                    <p class="chapter-text reveal-p spacing-top">You just met me where I was.</p>
+                </div>
+                <div class="tap-hint">Tap to reveal</div>
+            </div>
+        </section>
+
+        <!-- Chapter 5: What That Says About You -->
+        <section class="chapter" id="chapter-5" data-chapter="5">
+            <div class="glass-panel breathing">
+                <p class="chapter-text">Some people demand comfort.</p>
+                <p class="chapter-text spacing-top">Some people create it.</p>
+                <p class="chapter-text spacing-top emphasis">You create it.</p>
+                <p class="chapter-text spacing-top">Being around you doesn't drain energy.<br>It gives it back.</p>
+                <p class="chapter-text spacing-top">Silences don't feel awkward.<br>Conversations don't feel heavy.</p>
+                <p class="chapter-text spacing-top">Things just… feel okay.</p>
+                <div class="tap-hint delayed">Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 6: Turning 18 -->
+        <section class="chapter" id="chapter-6" data-chapter="6">
+            <div class="glass-panel">
+                <p class="chapter-text">Turning 18 doesn't rewrite you.</p>
+                <p class="chapter-text spacing-top">It doesn't suddenly change who you are.</p>
+                <p class="chapter-text spacing-top">If anything,<br>it feels like another gentle layer being added.</p>
+                <p class="chapter-text spacing-top">You're still you.<br>Just unfolding.</p>
+                <p class="chapter-text spacing-top">At your own pace.</p>
+                <div class="tap-hint">Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 7: What I Wish For You -->
+        <section class="chapter" id="chapter-7" data-chapter="7">
+            <div class="glass-panel">
+                <p class="chapter-text highlightable">I hope this year brings you days that don't feel forced.</p>
+                <p class="chapter-text highlightable spacing-top">Smiles that arrive without effort.<br>Calm you don't
+                    have to search for.</p>
+                <p class="chapter-text highlightable spacing-top">I hope you never feel the need<br>to become louder to
+                    be seen,<br>or harder to be respected.</p>
+                <p class="chapter-text highlightable spacing-top emphasis">The softness you carry isn't
+                    weakness.<br>It's depth.</p>
+                <div class="tap-hint">Click lines to highlight • Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 8: If You Ever Need a Place -->
+        <section class="chapter" id="chapter-8" data-chapter="8">
+            <div class="glass-panel">
+                <p class="chapter-text">If you ever need a place to speak freely,<br>or sit quietly,<br>or just exist
+                    without explaining —</p>
+                <p class="chapter-text spacing-top emphasis">I'm always there.</p>
+                <p class="chapter-text spacing-top">Not to fix anything.<br>Not to interfere.</p>
+                <p class="chapter-text spacing-top">Just to listen.<br>Or stay silent with you,<br>if that's what the
+                    moment needs.</p>
+                <div class="tap-hint pause-hint">Take a moment...</div>
+            </div>
+        </section>
+
+        <!-- Chapter 9: The Bond -->
+        <section class="chapter" id="chapter-9" data-chapter="9">
+            <div class="glass-panel">
+                <p class="chapter-text">Some bonds don't need names.</p>
+                <p class="chapter-text spacing-top">They don't need definitions or directions.</p>
+                <p class="chapter-text spacing-top">They grow the way natural things do —<br>without
+                    pressure.<br>without urgency.</p>
+                <p class="chapter-text spacing-top">And that kind of bond is rare.</p>
+                <div class="infinity-symbol">∞</div>
+                <div class="tap-hint">Tap to continue</div>
+            </div>
+        </section>
+
+        <!-- Chapter 10: The Reveal -->
+        <section class="chapter" id="chapter-10" data-chapter="10">
+            <div class="glass-panel final">
+                <div class="birthday-message">
+                    <h1 class="birthday-title">Happy Birthday, Muthu.</h1>
+                    <div class="sparkle">✨</div>
+                </div>
+
+                <p class="chapter-text spacing-top">Thank you —</p>
+                <p class="chapter-text">for the way you are,</p>
+                <p class="chapter-text">for the way you notice,</p>
+                <p class="chapter-text">for the calm you bring without trying.</p>
+
+                <p class="chapter-text spacing-top">I hope today feels warm.</p>
+                <p class="chapter-text">The kind of warmth that stays.</p>
+
+                <p class="signature spacing-top">— Irfan</p>
+
+                <div class="final-whisper">
+                    <p class="whisper">Some lights don't shine.</p>
+                    <p class="whisper">They warm.</p>
+                </div>
+
+                <button class="replay-button" id="replay-btn">Experience again</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
